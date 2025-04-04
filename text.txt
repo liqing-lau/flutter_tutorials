@@ -1,0 +1,3 @@
+Model layer - language/framework agnostic
+Data layer - connecting model layer to API/db
+Presentation layer - UI/State management stuff
