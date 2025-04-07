@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application/counter/counter_cubit.dart';
+import 'package:flutter_tutorials/counter/counter_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class CounterView extends StatelessWidget {
@@ -8,14 +8,14 @@ class CounterView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       // BlocBuilder rebuilds the widget when there's change in state
+      appBar: AppBar(title: Text("Counter")),
       body: BlocBuilder<CounterCubit, int>(
         builder: (context, state) {
           return Center(
             child: Text(
               "Current Count: $state",
-              style: const TextStyle(fontSize: 30),
+              style: const TextStyle(fontSize: 20),
             ),
           );
         },

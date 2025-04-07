@@ -1,3 +1,3 @@
-# flutter_application
+# flutter_tutorials
 
-A new Flutter project.
+Repo that stores all my tutorials which I'm building and learning on flutter with BLoC
