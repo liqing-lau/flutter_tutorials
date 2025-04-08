@@ -8,6 +8,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class CounterPage extends StatelessWidget {
   const CounterPage({super.key});
 
+  static Route<void> route() {
+    return MaterialPageRoute<void>(builder: (_) => const CounterPage());
+  }
+
   @override
   Widget build(BuildContext context) {
     return BlocProvider(

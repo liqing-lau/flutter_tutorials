@@ -4,7 +4,7 @@ import 'package:flutter_tutorials/infinite_list/post/bloc/post_bloc.dart';
 import 'package:flutter_tutorials/infinite_list/post/widgets/bottom_loader.dart';
 import 'package:flutter_tutorials/infinite_list/post/widgets/post_list_item.dart';
 
-// component that displays all the posts 
+// component that displays all the posts
 class PostsList extends StatefulWidget {
   const PostsList({super.key});
 
@@ -28,7 +28,6 @@ class _PostsListState extends State<PostsList> {
     return BlocBuilder<PostBloc, PostState>(
       builder: (context, state) {
         switch (state.status) {
-
           case PostStatus.failure:
             return const Center(child: Text('failed to fetch posts'));
 
@@ -43,9 +42,10 @@ class _PostsListState extends State<PostsList> {
                     ? const BottomLoader()
                     : PostListItem(post: state.posts[index]);
               },
-              itemCount: state.hasReachedMax
-                  ? state.posts.length
-                  : state.posts.length + 1,
+              itemCount:
+                  state.hasReachedMax
+                      ? state.posts.length
+                      : state.posts.length + 1,
               controller: _scrollController,
             );
 

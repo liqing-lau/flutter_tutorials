@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_tutorials/counter/counter_page.dart';
 import 'package:flutter_tutorials/infinite_list/post/view/posts_page.dart';
+import 'package:flutter_tutorials/login/app.dart';
 import 'package:flutter_tutorials/simple_bloc_observer.dart';
 
 void main() {
   Bloc.observer = const SimpleBlocObserver();
-  runApp(const MainApp());
+  runApp(const LoginApp());
 }
 
 class MainApp extends StatelessWidget {
@@ -17,7 +19,7 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
 
       // What page should the app display when the user starts the app?
-      home: PostsPage(),
+      home: CounterPage(),
     );
   }
 }
